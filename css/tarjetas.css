@@ -1,0 +1,107 @@
+:root{
+    --letra_tarjeta:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS';
+    --ancho_tarjeta:300px;
+    --alto_tarjeta: 490px;
+}
+
+.contenedor{
+    width: 100%;
+    height: 500px;
+}
+.tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    margin: 10px;
+    width: var(--ancho_tarjeta);
+    height: var(--alto_tarjeta);
+    font-family: var(--letra_tarjeta);
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+    position: relative;
+}
+.box .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .5s;
+}
+.box .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 5px 5px 20px #000;
+}
+.box .back{
+    transform: perspective(600px)rotateY(180deg);
+    background: rgb(231, 155, 155);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.box .back .link{
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+.box .back .link a{
+    color: #f3f3f3;
+}
+.box .back h3{
+    font-size: 20px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.box .back p{
+    letter-spacing: 1px;
+}
+
+.box:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.box:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+.box h1{
+    color: #fff;
+    padding: 30px;
+    margin-top: 100px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 25px;
+    background: rgba(27, 27, 27, 0.596);
+    box-shadow: 0 0 30px rgba(0 , 0, 0, 0.8);
+}
+
+.uno{
+    background: url(../imagenes/creatividad.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.dos{
+    background: url(../imagenes/diseño.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.tres{
+    background: url(../imagenes/imagen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+.cuatro{
+    background: url(../imagenes/innovacion.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

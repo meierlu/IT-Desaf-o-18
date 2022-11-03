@@ -1,0 +1,138 @@
+:root{
+    --color__letra: #fff;
+    --color_fondo: #ffe3e3;
+    --letra: 'Playfair Display', serif;
+    --barra-navegacion: #93b5c6;
+    --color_footer: #c9ccd5;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color_fondo);
+    font-family: var(--letra)
+}
+
+nav{
+    width: 100%;
+    background-color: var(--barra-navegacion) ;
+    color: white;
+    position: fixed; 
+    top: 0;
+    z-index: 100;
+}
+nav ul{
+    list-style: none;
+}
+nav li{
+    display:inline-block;
+    padding: 5px;
+    transition: all 1s;
+}
+nav ul li a{
+    display: block;
+    padding: 15px;
+    color: var(--color__letra);
+    text-decoration: none;
+}
+nav ul li:hover{
+    background: #e4d8dc;
+    color: #000;
+}
+nav ul li a:hover{
+    color: #000;
+}
+
+section{
+    padding-top: 15px;
+    width:95%;
+    margin: auto;
+    text-align: justify;
+    margin-top: 5px;
+}
+
+p{
+    margin: 16px 0;
+    line-height: 150%;
+}
+
+
+
+header{
+    width: 100%;
+    height: 350px;
+    background-image: url("../img/pexels-olia-danilevich-4974914.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.placa{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 150px;
+    background-color: rgba(95, 162, 218, 0.397);
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: var(--color__letra);
+    margin: 20px 0 auto;
+}
+
+.texto{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    top: 100px;
+    background-color: rgba(170, 151, 111, 0.336);
+    text-shadow: 5px 5px 20px cornsilk;
+    }
+
+
+.otro{
+    font-size: 45px;
+    color: var(--color__letra);
+    margin: 40px auto;
+}
+
+
+.subir{
+    width: 90px;
+    height: 35px;
+    background-color: #93b5c6;
+    border: 2px solid var(--color__letra);
+    border-radius: 5px;
+    position: fixed;
+    bottom: 55px;
+    right: 15px;
+    z-index: 101;
+    transition: all 0.5s;
+}
+
+
+.subir p{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 2px;
+    text-shadow: 0 0 5px #000;
+}
+.subir:hover{
+    width: 100px;
+    background-color: var(--color__letra);
+    color:#93b5c6;
+}
+.subir p:hover{
+    color: #93b5c6;
+    text-shadow: 0 0 5px var(--color__letra);
+}
